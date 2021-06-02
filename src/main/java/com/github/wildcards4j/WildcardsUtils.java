@@ -4,9 +4,10 @@ import java.util.Arrays;
 import static java.util.Objects.isNull;
 
 /**
- * The wildcards support methods. The wildcard pattern can include the characters ‘?’ and ‘*’
+ * Methods to work with wildcard patters.
+ * An wildcard pattern includes the characters ‘?’ or ‘*’
  * ‘?’ – matches any single character.
- * ‘*’ – Matches any sequence of characters (including the empty sequence).
+ * ‘*’ – Matches any sequence of characters (including an empty sequence).
  *
  * "b?t" matches "bat", "bot", but not "beet".
  * "b*t" matches "bat", "bot", "beet", "bt", "best", "be a carrot".
@@ -32,7 +33,8 @@ public class WildcardsUtils {
      * Compare string with wildcards mask, using default algorithm.
      * @param str string to check
      * @param pattern wildcard mask
-     * @return <code>true</code> if string matches wildcard pattern, otherwise <code>false</code>
+     * @return <code>true</code> if string matches wildcard pattern, otherwise <code>false</code>.
+     * If attribute <code>str</code> or <code>pattern</code> is <code>null</code>, returns <code>false</code>.
      */
     public static boolean equalsByWildcards(String str, String pattern) {
         return equalsByWildcards(str, pattern, WILDCARDS_SEARCH_ALGORITHM_DEFAULT);
@@ -44,7 +46,8 @@ public class WildcardsUtils {
      * @param pattern wildcard mask
      * @param wildcardsSearchAlgorithm compare algorithm
      * @return <code>true</code> if string matches wildcard pattern, otherwise <code>false</code>.
-     *
+     * If attribute <code>str</code>, <code>pattern</code> or <code>wildcardsSearchAlgorithm</code> is <code>null</code>,
+     * returns <code>false</code>.
      */
     public static boolean equalsByWildcards(String str, String pattern, WildcardsSearchAlgorithm wildcardsSearchAlgorithm) {
         if(isNull(str) || isNull(pattern) || isNull(wildcardsSearchAlgorithm)) {

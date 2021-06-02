@@ -7,7 +7,7 @@
     <artifactId>wildcards4j</artifactId>
     <version>1.0</version>
     <name>wildcards4j</name>
-    <description>Lightweight library for Java 8+ to compare string with wildcards pattern.</description>
+    <description>Lightweight library for Java 8+ to compare string with wildcards patterns.</description>
     <properties>
         <java.version>8</java.version>
     </properties>
