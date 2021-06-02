@@ -1,8 +1,4 @@
 package com.github.wildcards4j;
-
-import com.sun.istack.internal.NotNull;
-
-import javax.management.InvalidAttributeValueException;
 import java.util.Arrays;
 
 import static java.util.Objects.isNull;
@@ -38,7 +34,7 @@ public class WildcardsUtils {
      * @param pattern wildcard mask
      * @return <code>true</code> if string matches wildcard pattern, otherwise <code>false</code>
      */
-    public static boolean equalsByWildcards(@NotNull String str, @NotNull String pattern) {
+    public static boolean equalsByWildcards(String str, String pattern) {
         return equalsByWildcards(str, pattern, WILDCARDS_SEARCH_ALGORITHM_DEFAULT);
     }
 
@@ -50,7 +46,7 @@ public class WildcardsUtils {
      * @return <code>true</code> if string matches wildcard pattern, otherwise <code>false</code>.
      *
      */
-    public static boolean equalsByWildcards(@NotNull String str, @NotNull String pattern, @NotNull WildcardsSearchAlgorithm wildcardsSearchAlgorithm) {
+    public static boolean equalsByWildcards(String str, String pattern, WildcardsSearchAlgorithm wildcardsSearchAlgorithm) {
         if(isNull(str) || isNull(pattern) || isNull(wildcardsSearchAlgorithm)) {
             return false;
         }
@@ -58,6 +54,7 @@ public class WildcardsUtils {
         if (str.length() == 0) {
             return pattern.length() == 0 || hasOnlyAsterisks(pattern);
         }
+
         switch (wildcardsSearchAlgorithm){
             case DYNAMIC: return equalsByWildcardsDymanic(str, pattern);
             case RECURSIVE: return equalsByWildcardsRecursive(str, 0, str.length(), pattern, 0, pattern.length());
