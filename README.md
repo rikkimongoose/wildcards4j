@@ -12,18 +12,17 @@ An wildcard pattern includes the characters ‘?’ or ‘*’
 The same wildcards are used for file masks (like `*.txt`)
 
 ## Install
-The **wildcards4j** package is currently avaible at GitHub Packages.
-
-1. Authenticate to GitHub Packages. For more information, see "[Authenticating to GitHub Packages](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry#authenticating-to-github-packages)".
-3. Add to you `pom.xml`:
+The **wildcards4j** package is currently avaible at Maven Central repository.
+                    
+1. Add to yours `pom.xml`:
 ```xml
 <dependency>
-  <groupId>com.github.pluralia4j</groupId>
-  <artifactId>pluralia4j</artifactId>
-  <version>1.0</version>
+  <groupId>io.github.rikkimongoose</groupId>
+  <artifactId>wildcards4j</artifactId>
+  <version>1.0.0</version>
 </dependency>
 ```
-3. Run via command line:
+2. Run via command line:
 ```bash
 $ mvn install
 ```
