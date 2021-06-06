@@ -110,7 +110,7 @@
         <repository>
             <id>github</id>
             <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/rikkimongoose/wilfcards4j</url>
+            <url>https://maven.pkg.github.com/rikkimongoose/wildcards4j</url>
         </repository>
     </distributionManagement>
     <licenses>
