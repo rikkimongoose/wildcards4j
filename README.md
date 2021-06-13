@@ -12,7 +12,7 @@ An wildcard pattern includes the characters ‘?’ or ‘*’
 The same wildcards are used for file masks (like `*.txt`)
 
 ## Install
-The **wildcards4j** package is currently avaible at Maven Central repository.
+The **wildcards4j** package is currently avaible at [Maven Central repository](https://search.maven.org/artifact/io.github.rikkimongoose/wildcards4j).
                     
 1. Add to yours `pom.xml`:
 ```xml
